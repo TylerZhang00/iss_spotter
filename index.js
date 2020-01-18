@@ -31,12 +31,12 @@ const nextISSTimesForMyLocation = function(callback) {
   });
 };
 
-nextISSTimesForMyLocation((error, passTimes) => {
-  if (error) {
-    return console.log("It didn't work!", error);
-  }
-  printPassTimes(passTimes);
-});
+// nextISSTimesForMyLocation((error, passTimes) => {
+//   if (error) {
+//     return console.log("It didn't work!", error);
+//   }
+//   printPassTimes(passTimes);
+// });
 
 const printPassTimes = function(passTimes) {
   for (const pass of passTimes) {
@@ -46,3 +46,5 @@ const printPassTimes = function(passTimes) {
     console.log(`Next pass at ${datetime} for ${duration} seconds!`);
   }
 };
+
+module.exports = { printPassTimes };
